@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../public/css/base.css" />
+		<link rel="stylesheet" href="../public/css/reg.css" />
+		<title>紧急求救</title>
+	</head>
+	<body ng-app="cHospital">
+		<!--校医院电话-->
+		<div class="call">
+			<div class="header clearfix"  >
+	   	    <!--0.人物导航-->
+               <a href="../index.html" class="fl"><</a>
+               	<span>挂号预约</span>
+            </div> 
+		
+		<div class="callNum" ng-controller="call">
+			<div class="dp">校医院电话</div>
+			<ul>
+				<li ng-repeat="(key,call) in phoneNumber">
+					<span class="addressPhone">{{call.address}}</span><br />
+					<a href="">{{call.phone}}</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+    
+   <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-route/angular-route.js"></script>
+   <script src="../script/app.js"></script>
+   <script src="../script/controllers.js"></script>
+   <script src="../script/directives.js"></script>
+
+    
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../public/css/base.css" />
+		<link rel="stylesheet" href="../public/css/reg.css" />
+		<title>医疗报销</title>
+	</head>
+	<body ng-app="cHospital">
+		<!--报销医疗费用-->
+		<div class="apply">
+			<div class="header clearfix"  >
+	   	    <!--0.人物导航-->
+               <a href="../index.html" class="fl"><</a>
+               	<span>医疗报销</span>
+            </div> 
+            <div class="applyMess" ng-controller="apply">
+            	<!--报销清单列表-->
+            	<!--个人信息-->
+            	<div class="self">
+            		<span>个人基本信息</span>
+            		<span>姓名:马凤艳</span><br />
+            		<span>学号:2015118042</span><br />
+            		<span>院系:信息科学与技术学院</span><br />
+            	</div>
+             	 <table>
+             	 	<tr>
+             	 		<th>序号</th>
+             	 		<th>名字</th>
+             			<th>购买时间</th>
+             	 		<th>费用</th>
+             	 	</tr>
+             	 	<tr ng-repeat="(key,eachapply) in apply">
+             	 		<td>{{key+1}}</td>
+             			<td>{{eachapply.name}}</td>
+             	 		<td>{{eachapply.buyTime}}</td>
+             	 		<td>{{eachapply.price}}</td>
+             	 	</tr>
+             	 	<tr >
+             	 		<td colspan="3">合计 </td>
+             	 		<td></td>
+             	 	</tr>
+             	 </table>
+             	 <input type="button" value="报销确认" />
+             	 <a href="../index.html"><input type="button" value="取消报销" id="console" /></a>
+             	 <div class="wanner">注意：如有疑问，请到校医院核实</div>
+            </div>
+		</div>
+  <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-route/angular-route.js"></script>
+   <script src="../script/app.js"></script>
+   <script src="../script/controllers.js"></script>
+   <script src="../script/directives.js"></script>
+	</body>
+</html>

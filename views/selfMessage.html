@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <meta name"viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../public/css/base.css" />
+		<link rel="stylesheet" href="../public/css/reg.css" />
+		<title>个人信息</title>
+	</head>
+	<body ng-app="cHospital">
+		<div id="selfMessage" ng-controller="left">
+			<div class="header clearfix"  >
+	   	    <!--0.人物导航-->
+                <a href="../index.html" class="fl"><</a>
+               	<span>{{text}}</span>
+            </div> 
+            <div class="mainMessage" ng-if="text=='个人信息'">
+            	 <!--个人信息-->
+            	 
+            	<div>
+            		<table>
+            		<tr>
+            			<td>姓名</td>
+            			<td> 马凤艳 </td>
+            		</tr>
+            		<tr>
+            			<td>学号</td>
+            		    <td> 2015118042 </td>
+            		</tr>
+            		<tr>
+            			<td>专业</td>
+            		    <td> 软件工程 </td>
+            		</tr>
+            		<tr>
+            			<td>宿舍号</td>
+            		    <td> 14#224 </td>
+            		</tr>
+            		<tr>
+            			<td>联系方式</td>
+            		    <td>{{18220188079}}</td>
+            		</tr>
+            		</table>
+            	   <a href="../index.html"> <input type="button" class="close" name="" id="" value="关闭" /></a>
+            	</div>
+            	<div class="changePassword"  ng-if="text=='修改密码'">
+            		<span>原密码：</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="oldPassword" id="oldPassword" placeholder="请输入原密码" /><br />
+            	    <span>新密码：</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="newPassword" placeholder="输入新密码" /><br />
+            	    <span>确认密码：</span><input type="text" id="confimPassword" placeholder="确认密码" /><br />
+                     <input type="button" value="确认" class="confirm"/><a href="../index.html"><input type="button" value="取消" class="console"></a>
+            	</div>
+            	<!--关于我们-->
+            	<div class="aboutUs"  ng-if="text=='关于我们'">
+            		<div class="content">
+            			“校园医院app”是2017年互联网+的创新创业项目，该项目旨在为在校的大学生提供一个在校就医的平台，通过此平台，能够使校内医院充分利用，方便快捷的处理学生医疗的问题。版权所有，西北大学置业团队。
+            		</div>
+            	</div>
+            </div>
+		</div>
+		 <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-route/angular-route.js"></script>
+   <script src="../script/app.js"></script>
+   <script src="../script/controllers.js"></script>
+   <script src="../script/directives.js"></script>
+	</body>
+</html>

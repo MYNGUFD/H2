@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="public/css/base.css" />
+    <link rel="stylesheet" href="public/css/index.css" />
+    <title>校园医院</title> 
+</head>
+<body ng-app="cHospital">
+<div class="indexInfo" >
+	
+	<div class="selfMessage " ng-controller="selfMessage">
+		<!--侧面栏目部分-->
+		<div ng-class="{navs: true, collapse: collapsed}"  >
+			<dl>
+				<dt class="login">
+					<div class="avatar">
+						<img src="public/images/cbd.jpg" alt="" width="100px">
+					</div>
+					<span class="role">学生</span><span>马凤艳</span>
+				</dt>
+				<dd ng-class="{active: index == key}" ng-repeat="(key, nav) in selfNavs">
+					<span style="color: red;">O</span>
+					<a href="{{nav.link}}?text={{nav.text}}"  >
+						<span>{{nav.text}}</span>
+					</a>
+				</dd>
+			</dl>
+			 
+		</div>
+	</div>
+      <!--主页面部分-->
+      <div class="H">
+	   	<div class="clearfix" ng-class="{header: true, collapse: collapsed}">
+	   	   <!--0.人物导航-->
+            <div class="people f_l menu "   >
+            	<a href="javascript:;" ng-click="toggle()">
+            	<img id="peopleImg" src="public/images/cbd.jpg" width="30" height="30" />
+            	<span id="peopleName" >马凤艳</span>
+            	</a>
+            </div> 
+        </div>
+        </div>
+        <div ng-class="{ body:true,collapse: collapsed}">
+        <div class="mainFunction"  ng-controller="NavController"  >
+        	<div class="eachFunction">
+        		             <!--6.健康信息档案-->
+               <!--4.收藏阅览-->
+      		   <!--2.挂号预约-->
+               <!--5.购买药物-->
+               <!--医疗报销-->
+               <!--紧急求救-->
+		          <ul class="clearfix">
+		    	 	   <li ng-repeat="(key,nav) in navs" ng-cloak>
+		    	 	   	  <a href="{{nav.link}}">
+		    	 			<img src="{{nav.src}}" alt="" />
+		    	 			<p> {{nav.text}}</p>
+		    	 		</a>
+		    	 	   </li>
+		    	   </ul>
+        	</div>
+        </div>  
+       <!--3.医疗信息通知-->
+       <div class="hosMessage" ng-controller="hosMessage"  >
+       	        <div class="messHeader clearfix" >
+       	        	<span class="mui-icon mui-icon-info f_l"></span>
+       	        	<p>医务信息公告</p>
+       	        </div>
+       	        <div class="messMain">
+       	        	<ul>
+       	        		<li ng-repeat="(key ,list) in infomessage">
+       	        			<span class="fl"></span>
+       	        			<a href="./views/news.html?index={{key}}">
+       	        				<div class="item-title">{{list.title}}</div>
+       	        				<div class="content" >{{list.content}}...</div>
+       	        			</a></li>
+       	        	</ul>
+       	         </div>
+       </div>
+       </div>
+      </div>
+ <!--引入需要使用的js-->
+   <script src="bower_components/angular/angular.js"></script>
+   <script src="bower_components/angular-route/angular-route.js"></script>
+   <script src="script/app.js"></script>
+   <script src="script/controllers.js"></script>
+   <script src="script/directives.js"></script>
+</body>
+</html>

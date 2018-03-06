@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="../public/css/base.css" />
+        <link rel="stylesheet" href="../public/css/reg.css" />
+		<title>收藏预览</title>
+	</head>
+	<body ng-app="cHospital">
+	 <div class="collect">
+	 	<div class="header clearfix"  >
+	   	    <!--0.人物导航-->
+               <a href="../index.html" class="fl"><</a>
+               	<span>购买药物</span>
+            </div> 
+            <!--收藏药物预览图-->
+            <div class="collectM" ng-controller="collect">
+            	<ul>
+            		<li class="clearfix" ng-repeat="(key,coll) in collect">
+            		   <div class="medicine ">
+            		   	 <span class="name"><span>名称:</span>{{coll.name}}</span><br />
+            		   	 <span class="function"><span>作用:</span>{{coll.function}}</span>
+            		   </div>
+            			<a href="#" class="fr">删除</a>
+            		</li>
+            	</ul>
+            </div>
+	 </div>
+   <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-route/angular-route.js"></script>
+   <script src="../script/app.js"></script>
+   <script src="../script/controllers.js"></script>
+   <script src="../script/directives.js"></script>
+	</body>
+</html>

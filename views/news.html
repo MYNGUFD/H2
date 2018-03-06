@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	   <meta name"viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../public/css/base.css" />
+		<link rel="stylesheet" href="../public/css/reg.css" />
+		<title>医疗信息公告</title>
+	</head>
+	<body  ng-app="cHospital">
+		<div class="news">
+			<!--头部的栏目-->
+			<div class="header clearfix"  >
+	   	    <!--0.人物导航-->
+               <a href="../index.html" class="fl"><</a>
+               	<span>医疗信息公告</span>
+            </div> 
+			<div class="content"  ng-controller="news">
+				<h3>{{oneNews.title}}</h3>
+				<p>发布时间:{{oneNews.time}}</p>
+				<div class="mainContent">{{oneNews.content}}</div>
+			</div>
+			<a href="../index.html"><input type="button" class="close" name="" id="" value="关闭" /></a>
+		</div>
+   <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-route/angular-route.js"></script>
+   <script src="../script/app.js"></script>
+   <script src="../script/controllers.js"></script>
+   <script src="../script/directives.js"></script>
+	</body>
+</html>

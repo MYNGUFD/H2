@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>挂号预约</title>
+		<link rel="stylesheet" href="../public/css/base.css" />
+	  <link rel="stylesheet" href="../public/css/reg.css" />
+	</head>
+	<body ng-app="cHospital">
+		<div class="reg" >
+			<!--头部的栏目-->
+			<div class="header clearfix"  >
+	   	    <!--0.人物导航-->
+               <a href="../index.html" class="fl"><</a>
+               	<span>挂号预约</span>
+            </div> 
+            <!--内容区域-->
+            <div class="contaner">
+            	<div class="showFont">输入症状</div>
+              <form action="regDoc.php" method="post">
+              	<input type="text" placeholder="输入您的症状"  class="input" name="input"/><br />
+              	<input type="submit" name="" id="" value="预约" />
+              	<a href="../index.html"><input type="button" value="取消" /></a>
+              </form>
+              <!--预约信息显显示-->
+               <div  class="showMes" ng-controller="regDoctor">
+               	<span class="t">预约信息：预约成功</span>
+               	<div class="te">
+               		<span class="time">预约时间：{{doctor.time}}</span><br />
+               		<span class="name">医生：{{doctor.name}}</span><br />
+                    <span class="phone">联系方式： {{doctor.phone}}</span><br />
+                    <span class="address">地点：{{doctor.address}}</span>
+               	</div>
+               </div>
+            	
+            </div>
+		</div>
+ <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-route/angular-route.js"></script>
+   <script src="../script/app.js"></script>
+   <script src="../script/controllers.js"></script>
+   <script src="../script/directives.js"></script>
+	</body>
+</html>

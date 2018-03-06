@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	  <meta name"viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="../public/css/base.css" />
+		<link rel="stylesheet" href="../public/css/reg.css" />
+		<title>个人健康信息记录</title>
+	</head>
+	<body ng-app="cHospital">
+		<div class="mes">
+			<!--头部的栏目-->
+			<div class="header clearfix"  >
+	   	    <!--0.人物导航-->
+               <a href="../index.html" class="fl"><</a>
+               	<span>健康信息档案</span>
+            </div> 
+            <div class="mesCon">
+            	<!--药物购买-->
+            	<div class="mesBuy">
+            		<!--药物的种类，购买时间，购买的价钱-->
+            		<span class="buyMech">购买药物记录</span>
+            	  <table ng-controller="apply">
+             	 	<tr>
+             	 		<th>名字</th>
+             			<th>购买时间</th>
+             	 		<th>费用</th>
+             	 	</tr>
+             	 	<tr ng-repeat="(key,eachapply) in apply">
+             			<td>{{eachapply.name}}</td>
+             	 		<td>{{eachapply.buyTime}}</td>
+             	 		<td>{{eachapply.price}}</td>
+             	 	</tr>
+             	 </table>
+            	</div>
+            	<!--疫苗注射-->
+            	<!--疫苗种类，注射时间-->
+            	<div class="mesInjection">
+            		<span class="inMech">疫苗注射记录</span>
+            		<table ng-controller="mesMec">
+             	 	<tr>
+             	 		<th>种类</th>
+             			<th>注射时间</th>
+             	 		<th>费用</th>
+             	 	</tr>
+             	 	<tr ng-repeat="(key,eachapply) in inMech">
+             			<td>{{eachapply.style}}</td>
+             	 		<td>{{eachapply.inTime}}</td>
+             	 		<td>{{eachapply.price}}</td>
+             	 	</tr>
+             	 </table>
+            	</div>
+            </div>
+            <a href="../index.html"><input  class="close" type="button" name="" id="" value="关闭" /></a>
+		</div>
+  <script src="../bower_components/angular/angular.js"></script>
+   <script src="../bower_components/angular-route/angular-route.js"></script>
+   <script src="../script/app.js"></script>
+   <script src="../script/controllers.js"></script>
+   <script src="../script/directives.js"></script>
+	</body>
+</html>

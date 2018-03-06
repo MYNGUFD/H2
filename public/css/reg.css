@@ -1,0 +1,324 @@
+//挂号预约的css文件
+body,html{
+	height: 100%;
+}
+.reg,.buy,.call,.collect,.apply,.mes,.news,#selfMessage{
+	/*background: #E6E5E5;*/
+	position: relative;
+	height: 100%;
+}
+.reg .header,.buy .header,.call .header,#selfMessage .header,.collect .header,.apply .header,.mes .header,.news .header{
+            background: #007AFF;
+            height: 60px;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 0 1px #555555;
+        }
+.reg .header a,.buy .header a,.call .header a,.collect .header a,#selfMessage .header a,.apply .header a,.mes .header a ,.news .header a{
+	display: block;
+    width: 40px;
+    height: 60px;
+    color: #5F5F5F;
+    font-weight: 700;
+    font:40px/60px "微软雅黑";
+}
+.reg .header span,.buy .header span,#selfMessage .header span,.call .header span,.collect .header span,.news .header span,.apply .header span,.mes .header span{
+	display: block;
+	line-height: 60px;
+	font-size: 20px;
+	height: 60px;
+}
+.reg .contaner .showFont{
+	font: 20px/60px "微软雅黑";
+	height: 60px;
+	background: #999;
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 30px;
+	margin-top: 10px;
+	 margin-bottom: 5px;
+	 border-bottom-right-radius: 20px;
+	 border-top-left-radius: 20px;
+	}
+	.reg .contaner .input{
+		background: #fff;
+		width: 90%;
+		margin: 0 auto;
+		margin: 0 10px;
+		font-size: 20px;
+		border:1px solid #666;
+		height: 60px;
+		border-radius: 10px;
+	}
+   .reg .contaner input[type='submit'],.reg .contaner input[type='button']{
+    	background: green;
+       width: 40%;
+       font-size: 25px;
+       text-align: center;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 20px;
+      margin:20px 10px;
+   }
+   .reg .contaner input[type='button']{
+   	background: deepskyblue;
+   }
+   .reg .showMes{
+   	background:#999;
+		width: 90%;
+		margin: 0 auto;
+		margin: 0 10px;
+		font-size: 20px;
+		border:1px solid #666;
+		border-radius: 5px;
+		padding: 11px;
+   }
+   /*购买药物的的样式*/
+  .buy .medicine{
+  	width: 96%;
+  	border-radius: 5px;
+  	margin:0 auto;
+  	 margin-top:10px;
+  	background:#929292;
+  }
+    .buy .medicine span{
+    	/*display: block;*/
+    	padding-left: 5px;
+       font-size:16px;
+       font-family:  "微软雅黑";
+    }
+    .buy .apply,.buy .console{
+    	width: 40%;
+    	background: #05AB94;
+    	border-radius: 10px;
+    	height: 50px;
+    	margin-top:10px;
+    	position: absolute;
+    	font: 20px/50px "微软雅黑";
+    	left: 5%;
+    }
+.buy .console{
+	left:50%;
+	background: #EB9D58;
+}
+/*紧急求救的电话*/
+.call .callNum{
+	 background: #EEEEEE;
+	 margin-top:6px;
+}
+.call .callNum .dp{
+	font: 18px/20px "arial black";
+	color: #555555;
+	margin-bottom: 9px;
+}
+.call .callNum li:nth-child(1){
+	border-top: 1px solid #dfdfdf ;
+}
+.call .callNum li{
+	color: black;
+	height:50px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.call .callNum li span{
+	padding-left: 5px;
+	font: 14px/30px "微软雅黑";
+}
+.call .callNum li a{
+	  font:13px/20px "微软雅黑";
+	  padding-left: 10px;
+	  
+}
+/*收藏的药物预览*/
+.collect ul{
+	margin:10px 5px;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius:20px ;
+}
+.collect ul li{
+	background: #bbb;
+	border-bottom: 1px dashed #5F5F5F;
+	box-shadow:  1px 1px 10px #888;
+}
+.collect ul li:last-child{
+	border-bottom: none;
+}
+.collect ul li span{
+	padding-left: 5px;
+	font: 15px/17px "微软雅黑";
+}
+.collect ul li a{
+	text-decoration:underline;
+	margin-right: 5px;
+	margin-bottom: 3px;
+	font: 17px/20px "微软雅黑";
+	color: red;
+}
+/*医疗报销*/
+.apply .applyMess .self{
+	margin-top: 5px;
+	background: #ccc;
+	 border: 2px  solid #bbb;
+	 box-shadow: -1px 1px 8px #bbb;
+}
+.apply .applyMess .self span:first-child{
+	display: block;
+	color: black;
+   font: 16px/20px "微软雅黑";
+   text-align: center;
+    font-weight: 700;
+    background: #999;
+    height: 20px;
+  
+}
+.apply .applyMess  table,.mes .mesBuy table,.mes .mesInjection table{
+	width: 100%;
+	margin-top: 5px;
+	background: #ccc;
+	text-align: center;
+	
+}
+.apply .applyMess  table tr th,.mes .mesBuy table tr th,.mes .mesInjection table tr th{
+	background:#007AFF ;
+	height: 25px;
+}
+.apply .applyMess  table tr,.mes .mesBuy table tr,.mes .mesInjection table tr{
+	font: 18px/20px "微软雅黑";
+	height: 25px;
+}
+.apply .applyMess  table tr td:nth-child(1){
+	width: 10%;
+}.apply .applyMess  table tr td:nth-child(n+2),.mes .mesBuy table tr td,.mes .mesInjection table tr td{
+	width: 33.33%;
+}
+ .mes .mesBuy table tr td{
+ 	width: 33.3%;
+ }
+.apply .applyMess .wanner{
+	color: red;
+}
+.apply .applyMess  table tr:nth-child(2n+1),.mes .mesBuy table tr:nth-child(2n+1),.mes .mesInjection table tr:nth-child(2n+1){
+	background: #5293D0;
+}
+.apply .applyMess  input[type='button'],#selfMessage .changePassword input[type='button']{
+ width: 40%;
+ border-radius: 5px;
+}
+.apply .applyMess  input[type='button'], #selfMessage .changePassword input[type='button']{
+	background: green;
+	 font-size: 25px;
+       text-align: center;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 20px;
+      margin:20px 10px;
+}
+.apply .applyMess  #console{
+	background: #5293D0;
+}
+/*健康信息档案记录*/
+ .mes .mesBuy .buyMech,.mes  .mesInjection .inMech{
+ 	display: block;
+ 	font: 16px/25px "微软雅黑";
+ 	padding-left: 10px;
+ 	background: #929292;
+ }
+ .mes .mesBuy .buyMech{
+ 	border-top-left-radius: 20px;
+ 	border-bottom-right-radius:20px ;
+ }
+ .mes  .mesInjection .inMech{
+ 	border-bottom-left-radius: 20px;
+ 	border-top-right-radius:20px ;
+ }
+ .mes .close,.news .close,#selfMessage .close{
+ 	width:90%;
+ 	border-radius: 10px;
+ 	background:#FDCC65;
+ 	height: 40px;
+ 	font: 20px/40px "微软雅黑";
+ 	font-weight: 700;
+ 	margin: 5%;
+ }
+ /*新闻的主要内容*/
+.news .content{
+    margin-top: 10px;
+    box-shadow: 1px 2px 10px #559977;
+}
+.news .content h3{
+	width: 100px;
+	background: #929292;
+	border-top-left-radius: 20px 30px;
+	border-bottom-right-radius: 30px 20px;
+	padding-left: 20px;
+}
+.news .content p{
+	font: 16px/20px "微软雅黑";
+	padding-left: 10px;margin-bottom: 5px;
+}
+.news .content .mainContent{
+	 text-indent:2em;
+	 font: 16px/18px "微软雅黑";
+}
+/*个人信息代码*/
+#selfMessage .mainMessage table{
+	background: #9f9f9f;
+	width: 96%;
+	border-bottom-left-radius: 20px 10px;
+	border-top-right-radius: 20px;
+	text-align: center;
+	margin: 10px auto;
+		box-shadow: 1px 2px 5px #333333;
+
+}
+#selfMessage .mainMessage table tr{
+	font: 16px/25px "微软雅黑";
+	height: 25px;
+	border-bottom: 1px solid #5F5F5F;
+}
+#selfMessage .mainMessage table tr:last-child{
+	border-bottom: none;
+}
+#selfMessage .mainMessage table tr td{
+	width: 50%;
+}
+/*修改密码部分*/
+#selfMessage .changePassword{
+	margin-top: 10px;
+	padding-top: 10px;
+	margin:5px;
+	border-radius: 10px;
+	height: 200px;
+	font: 16px/30px "微软雅黑";
+	background: #C0C0C0;
+}
+#selfMessage .changePassword span{
+	width: 20%;
+	padding-left: 5px;
+	height: 30px;
+}
+#selfMessage .changePassword input{
+	width: 60%;
+	height: 28px;
+	border: 2px solid #8F8F8F;
+	
+}
+#selfMessage .changePassword a .console{
+	background: #EB9D58;
+}
+#selfMessage .aboutUs{
+	margin-top:10px ;
+	background: #DFDFDF;
+	width: 98%;
+	margin: 0 auto;
+	height: 200px;
+	padding-top: 20px;
+border-top-left-radius: 10px 20px;
+border-bottom-right-radius: 10px 20px;
+}
+#tableBox .aboutUs .content{
+	font: 18px/25px "微软雅黑";
+	text-indent: 3em;
+	padding: 5px;
+	
+	
+}

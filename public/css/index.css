@@ -1,0 +1,191 @@
+/*侧面部分呢*/
+ 
+/*头部和导航部分*/
+.indexInfo {
+    		width: 100%;
+    		background: #E8E8E8;
+    	}
+    	/*实现页面移动*/
+   .viewport {
+  max-width: 640px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.collapse {
+  transform: translate(9.8125rem);
+  transition: all 0.5s 0.1s;
+}
+ 
+ .body {
+  transition: all 0.5s 0.1s;
+}
+    	/*侧面导航的部分*/
+   .indexInfo .selfMessage{
+   	 width: 9.8125rem;
+    height: 100%;
+    color: black;
+    background-color: #eff;
+     transition: all  ;
+     position: fixed;
+    left: -9.8125rem;
+   top: 0;
+
+   }
+   .indexInfo .selfMessage .login img{
+    width: 100%;
+   }
+   .indexInfo .selfMessage .login span{
+   	text-align: center;
+   	line-height: 30px;
+   	margin-left: 20px;
+   }
+     .indexInfo .selfMessage .active{
+     	color:black;
+     	border-top: 2px solid #597;
+     }
+     .indexInfo .selfMessage dd {
+  line-height: 1;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+ .indexInfo .selfMessage  dd span {
+  color: #1a1a1a;
+}
+ .indexInfo .selfMessage  dd.active span {
+  color: #23a392;
+}
+ .indexInfo .selfMessage dd a {
+  font-size: 1.125rem;
+  color: #FFF;
+}
+    	.indexInfo .header{
+    	  transition: all  0.5s 0.1s;
+           background: #007AFF;
+    		height: 60px;
+    		font-size: 16px;
+    		border-bottom: 1px solid #eee;
+    		box-shadow: 0 0 1px #555555;
+    	}
+    	.header .people{width: 60%; line-height: 50px;}
+    	 .header .people #peopleImg{
+    		width: 40px;
+    		height: 40px;
+    		border-radius: 20px;
+    		background: #555555;
+    		line-height: 60px;
+    		margin-left: 5px;
+    		margin-top: 3px;
+    	}
+    	.header .people #speopleName{
+    		line-height: 30px;
+    	}
+    	.header .call{
+    		line-height: 60px;
+    		margin-right: 10px;
+    	}
+    	.header .call a{
+    		display: block;
+            color: red;
+    		font-size:18px;
+    		line-height: 60px;
+    		font-weight: 700;
+    	}
+    	.header .call a span{
+    		display: block;
+    		width: 50px;
+    		height: 50px;
+    		color: #0062CC;
+    	}
+    	
+        /*导航栏的主要内容*/
+	    .mainFunction .eachFunction {
+	    	width: 100%;
+			 border-bottom: 1px solid #ddd;
+			 background: #fff;
+			 }
+			.mainFunction .eachFunction ul{
+				width: 100%;
+				margin-top:5px;
+				
+			}
+			.mainFunction .eachFunction ul li{
+				float: left;
+			     width: 33.333%;
+			     margin-top: 5px;
+			}
+			.mainFunction .eachFunction ul li a{
+				width: 100%;
+				display: block;
+			}
+			.mainFunction .eachFunction ul li a img{
+				width: 55%;
+				display: block;
+				margin:0 auto ;
+			}
+			.mainFunction .eachFunction ul  li a p{
+				color: gray;
+				text-align: center;
+				padding: 3px 0px ;
+			}
+	/*医务信息通告*/
+	.hosMessage{
+		width: 100%;
+		font-size: 14px;
+	}
+	.hosMessage .messHeader{
+		height: 40px;
+	    border-top: 1px dashed #929292;
+        border-bottom: 1px dashed #929292;
+        color: #FF5053;
+	}
+	
+	.hosMessage .messHeader span{
+		/*line-height: 40px;*/
+		margin-top: 7px;
+	}
+	.hosMessage .messHeader p{
+         line-height: 40px;
+     	width: 100%;
+     	color: #CF2D28;
+       font-size: 20px;
+	}
+	.hosMessage .messMain{
+	    background:#fff;
+
+	}
+		.hosMessage .messMain ul{}
+   .hosMessage .messMain ul li{
+			height: 40px;
+			border-bottom: 1px solid #aaa;
+			line-height: 30px;
+			margin-bottom: 2px;
+			padding-left:5px ;
+		 	overflow: hidden;
+		 	margin-top: 3px;
+		}
+      .hosMessage .messMain ul li span{
+      	display: block;
+		  	width: 15px;
+		  	height: 15px;
+		  	border-radius: 50%;
+		  	background: #05AB94;
+		  	margin-top: 4px;
+		  	
+		}
+      .hosMessage .messMain ul li a{
+      	display: block;
+      }
+        .hosMessage .messMain ul li a:hover{
+        	text-decoration: none;
+        	color: red;
+        }
+       .hosMessage .messMain ul li a .item-title{
+       	height: 18px;
+       	line-height: 22px;
+       	font-size: 14px;
+       }
+       .hosMessage .messMain ul li a .item-content{
+       	height: 20px;
+       	line-height: 20px;
+       	font-size: 10px;
+       }
